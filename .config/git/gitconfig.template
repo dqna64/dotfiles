@@ -1,0 +1,28 @@
+[user]
+    name = "{{PRIMARY_NAME}}"
+    email = "{{PRIMARY_EMAIL}}"
+
+[includeIf "gitdir:~/example-repository-opt-into-secondary-git-identity/"]
+    path = ~/.gitconfig-secondary
+
+[core]
+    excludesfile = ~/.gitignore_global
+    editor = vim
+
+[push]
+    default = simple
+
+[pull]
+    rebase = true
+
+[init]
+	defaultBranch = main
+
+# Identity switching aliases
+# $ git primary    # Switch to primary identity (work)
+# $ git secondary  # Switch to secondary identity (personal)  
+# $ git whoami     # Check current identity
+[alias]
+    primary = !git config user.name "{{PRIMARY_NAME}}" && git config user.email "{{PRIMARY_EMAIL}}" && echo "Switched to primary identity: {{PRIMARY_EMAIL}}"
+    secondary = !git config user.name "{{SECONDARY_NAME}}" && git config user.email "{{SECONDARY_EMAIL}}" && echo "Switched to secondary identity: {{SECONDARY_EMAIL}}"
+    whoami = !echo "$(git config user.name) <$(git config user.email)>"

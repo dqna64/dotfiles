@@ -1,0 +1,10 @@
+# === Copy to ~/.config/git/git-identity and fill in your details
+
+# Primary git identity, used as default when running git operations that
+# depend on git identity
+PRIMARY_NAME="Primary Name"
+PRIMARY_EMAIL="primary@example.com"
+
+# Secondary git identity, opt in for repos in certain paths
+SECONDARY_NAME="Secondary"  
+SECONDARY_EMAIL="secondary@example.com"
