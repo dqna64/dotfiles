@@ -25,4 +25,8 @@
 [alias]
     primary = !git config user.name "{{PRIMARY_NAME}}" && git config user.email "{{PRIMARY_EMAIL}}" && echo "Switched to primary identity: {{PRIMARY_EMAIL}}"
     secondary = !git config user.name "{{SECONDARY_NAME}}" && git config user.email "{{SECONDARY_EMAIL}}" && echo "Switched to secondary identity: {{SECONDARY_EMAIL}}"
-    whoami = !echo "$(git config user.name) <$(git config user.email)>"
+    whoami = !git config user.name && git config user.email
+    ssh-primary = "!ssh-add -D 2>/dev/null; ssh-add {{PRIMARY_REMOTE_ACCOUNT_SSH_PUBLIC_KEY}} 2>/dev/null && echo '✅ PRIMARY SSH:' && ssh -T git@github.com 2>&1 | grep 'Hi'"
+    ssh-secondary = "!ssh-add -D 2>/dev/null; ssh-add {{SECONDARY_REMOTE_ACCOUNT_SSH_PUBLIC_KEY}} 2>/dev/null && echo '✅ SECONDARY SSH:' && ssh -T git@github.com 2>&1 | grep 'Hi'"
+    ssh-whoami = "!ssh -T git@github.com 2>&1 | grep 'Hi' || echo '❌ Not authenticated'"
+    

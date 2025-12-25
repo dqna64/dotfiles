@@ -22,7 +22,9 @@ substitute_template() {
     sed "s/{{PRIMARY_NAME}}/$PRIMARY_NAME/g; \
          s/{{PRIMARY_EMAIL}}/$PRIMARY_EMAIL/g; \
          s/{{SECONDARY_NAME}}/$SECONDARY_NAME/g; \
-         s/{{SECONDARY_EMAIL}}/$SECONDARY_EMAIL/g" \
+         s/{{SECONDARY_EMAIL}}/$SECONDARY_EMAIL/g; \
+         s|{{PRIMARY_REMOTE_ACCOUNT_SSH_PUBLIC_KEY}}|$PRIMARY_REMOTE_ACCOUNT_SSH_PUBLIC_KEY|g; \
+         s|{{SECONDARY_REMOTE_ACCOUNT_SSH_PUBLIC_KEY}}|$SECONDARY_REMOTE_ACCOUNT_SSH_PUBLIC_KEY|g" \
          "$template_file" > "$output_file"
 }
 
