@@ -113,6 +113,19 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "Pageup to capslock",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "page_up",
+                                    "modifiers": { "optional": ["caps_lock"] }
+                                },
+                                "to": [{ "key_code": "caps_lock" }],
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },
