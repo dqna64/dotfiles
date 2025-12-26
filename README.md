@@ -47,3 +47,4 @@ $ bash ~/.config/git/git-setup.sh
 - [x] readme details about git setup
 - [ ] readme info about config variables
 - [ ] vim and nvim dotfiles
+- [ ] .gitignore for machine-specific files
