@@ -36,8 +36,21 @@ substitute_template "$DOTFILES_DIR/git/gitconfig-secondary.template" "$HOME/.git
 ln -sfv "$DOTFILES_DIR/git/gitignore_global" "$HOME/.gitignore_global"
 
 echo "Git configuration installed successfully!"
+
+echo "==="
+
 echo "Primary email: $PRIMARY_EMAIL"
 echo "Secondary email: $SECONDARY_EMAIL"
 echo ""
 echo "Use 'git primary' or 'git secondary' to switch identities"
 echo "Use 'git whoami' to check current identity"
+
+echo "==="
+
+echo "Primary github account ssh key: $PRIMARY_REMOTE_ACCOUNT_SSH_PUBLIC_KEY"
+echo "Secondary github account ssh key: $SECONDARY_REMOTE_ACCOUNT_SSH_PUBLIC_KEY"
+echo ""
+echo "Use 'git ssh-primary' or 'git ssh-secondary' to switch accounts"
+echo "Use 'git ssh-whoami' to check current account"
+
+echo "==="

@@ -9,5 +9,5 @@ PRIMARY_EMAIL="primary@example.com"
 SECONDARY_NAME="Secondary Name"  
 SECONDARY_EMAIL="secondary@example.com"
 
-PRIMARY_GITHUB_ACCOUNT_SSH_PUBLIC_KEY="/path/to/ssh/public_key
-SECONDARY_GITHUB_ACCOUNT_SSH_PUBLIC_KEY="/path/to/ssh/public_key
+PRIMARY_GITHUB_ACCOUNT_SSH_PUBLIC_KEY="/path/to/ssh/public_key"
+SECONDARY_GITHUB_ACCOUNT_SSH_PUBLIC_KEY="/path/to/ssh/public_key"
