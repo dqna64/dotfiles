@@ -54,3 +54,5 @@ stashmergepop() {
       return 1
     fi
   else
+  fi
+}
