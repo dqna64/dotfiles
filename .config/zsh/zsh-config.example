@@ -1,0 +1,5 @@
+# === Set zsh theme
+# Options:
+# - p10k
+# - starship
+ZSH_THEME="p10k"
