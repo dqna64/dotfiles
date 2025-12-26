@@ -17,3 +17,9 @@ dotfiles config --local status.showUntrackedFiles no
 # Checkout the dotfiles
 dotfiles checkout
 ```
+
+## Git setup
+
+```
+$ bash ~/.config/git/git-setup.sh
+```
