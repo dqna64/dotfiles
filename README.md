@@ -2,7 +2,7 @@
 
 Dotfiles repo in the form of a bare git repo. That means the repo is just a `.git` and the actual files are scatter across `$HOME` directory (mostly in `~/.config/`).
 
-## Install
+## Download
 
 ```bash
 # Clone to your machine as a bare git repo
@@ -17,6 +17,17 @@ $ dotfiles config --local status.showUntrackedFiles no
 # Checkout the dotfiles (will error if some files from dotfiles already
 # exist on your machine)
 $ dotfiles checkout
+```
+
+## Usage
+
+For git operations for this repo, use the `dotfiles` alias command instead the `git` command
+
+```bash
+$ dotfiles add ~/.zshrc
+$ dotfiles commit -m 'update .zshrc'
+$ dotfiles pull
+$ dotfiles push
 ```
 
 ## Git setup (optional)
