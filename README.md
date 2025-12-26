@@ -34,4 +34,5 @@ $ bash ~/.config/git/git-setup.sh
 
 - [ ] print cp instructions for git identity instead of automatically cp
 - [x] readme details about git setup
+- [ ] readme info about config variables
 - [ ] vim and nvim dotfiles
