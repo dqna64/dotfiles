@@ -3,3 +3,4 @@
 # - p10k
 # - starship
 ZSH_THEME="p10k"
+ENABLE_P10K_INSTANT_PROMPT=false
