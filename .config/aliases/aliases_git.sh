@@ -1,3 +1,13 @@
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+alias gm="git commit -m "
+alias gps="git push"
+alias gpl="git pull"
+alias gd="git diff"
+alias gl="git log"
+
+# By BlakeC
 checkoutorigin() {
   git remote set-branches --add origin "$1" && git fetch origin "$1" && git checkout "$1"
 }
