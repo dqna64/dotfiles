@@ -1,6 +1,9 @@
 # === Set zsh theme
+# Note: oh-my-zsh already uses a variable called ZSH_THEME. We use ZSH_THEME_MY which
+# may affect the final value set for ZSH_THEME by the zsh theme setup in these
+# dotfiles.
 # Options:
-# - p10k
-# - starship
+# - "p10k"
+# - "starship"
 ZSH_THEME_MY="p10k"
 ENABLE_P10K_INSTANT_PROMPT=false
