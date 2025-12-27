@@ -2,5 +2,5 @@
 # Options:
 # - p10k
 # - starship
-ZSH_THEME="p10k"
+ZSH_THEME_MY="p10k"
 ENABLE_P10K_INSTANT_PROMPT=false
