@@ -10,7 +10,6 @@
 if ! pgrep -x "yabai" > /dev/null; then
     echo "Starting yabai service..."
     yabai --start-service
-    sleep 1
     echo "Yabai started"
 else
     echo "Yabai is already running"
