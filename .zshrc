@@ -56,6 +56,6 @@ bindkey "[C" forward-word
 
 # ===
 
-if [ $ENABLE_YABAI_DQNA64 == "true" ]; then
+if [[ "$ENABLE_YABAI_DQNA64" == "true" ]]; then
     ~/.config/yabai/start.sh
 fi
