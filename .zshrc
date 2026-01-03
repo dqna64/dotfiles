@@ -58,4 +58,10 @@ bindkey "[C" forward-word
 
 if [[ "$ENABLE_YABAI_DQNA64" == "true" ]]; then
     ~/.config/yabai/start.sh
+
+    local YABAI_ALIASES_PATH="$HOME/.config/yabai/aliases.zsh" 
+    if [ -f "$YABAI_ALIASES_PATH" ]; then
+	source "$YABAI_ALIASES_PATH"
+    fi
 fi
+

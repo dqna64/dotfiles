@@ -14,3 +14,9 @@ ENABLE_P10K_INSTANT_PROMPT=false
 # Enable Yabai along with my custom yabai configs
 ENABLE_YABAI_DQNA64=false # true or false
 
+# === Verbosity for my dotfiles stdout
+# Options:
+# - 0: almost nothing
+# - 1: important messages
+# - 2: informative messages
+VERBOSITY_DQNA64=1
