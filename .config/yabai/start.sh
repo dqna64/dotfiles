@@ -6,6 +6,8 @@
 # - $HOME/.config/yabai/yabairc
 # - $HOME/.yabairc
 
+/usr/bin/env sh "$HOME/.config/yabai/yabairc"
+
 # Check if yabai is running
 if ! pgrep -x "yabai" > /dev/null; then
     echo "Starting yabai service..."
