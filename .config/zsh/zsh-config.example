@@ -19,4 +19,4 @@ ENABLE_YABAI_DQNA64=false # true or false
 # - 0: almost nothing
 # - 1: important messages
 # - 2: informative messages
-VERBOSITY_DQNA64=1
+export VERBOSITY_DQNA64=1

@@ -13,7 +13,7 @@ if ! pgrep -x "yabai" > /dev/null; then
     #/usr/bin/env sh "$HOME/.config/yabai/yabairc"
     echo "Yabai started"
 else
-    if [[ "$VERBOSITY_DQNA64" == "2" ]]; then
+    if (( VERBOSITY_DQNA64 >= 2 )); then
     	echo "Yabai is already running"
     fi
 fi
