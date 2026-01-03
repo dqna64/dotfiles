@@ -3,7 +3,14 @@
 # may affect the final value set for ZSH_THEME by the zsh theme setup in these
 # dotfiles.
 # Options:
-# - "p10k"
-# - "starship"
+# - p10k
+# - starship
 ZSH_THEME_MY="p10k"
+
+# === 
 ENABLE_P10K_INSTANT_PROMPT=false
+
+# === Yabai window manager for macos
+# Enable Yabai along with my custom yabai configs
+ENABLE_YABAI_DQNA64=false # true or false
+
