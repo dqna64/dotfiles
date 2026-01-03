@@ -6,17 +6,15 @@
 # - $HOME/.config/yabai/yabairc
 # - $HOME/.yabairc
 
-/usr/bin/env sh "$HOME/.config/yabai/yabairc"
-
 # Check if yabai is running
 if ! pgrep -x "yabai" > /dev/null; then
     echo "Starting yabai service..."
     yabai --start-service
+    #/usr/bin/env sh "$HOME/.config/yabai/yabairc"
     echo "Yabai started"
 else
-    echo "Yabai is already running"
+    if [[ "$VERBOSITY_DQNA64" == "2" ]]; then
+    	echo "Yabai is already running"
+    fi
 fi
-
-# === Aliases
-alias yfff="$HOME/.config/yabai/firefox_fifths.sh"
 
