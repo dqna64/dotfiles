@@ -1,6 +1,6 @@
 # Gordon's dotfiles
 
-Dotfiles repo in the form of a bare git repo. That means the repo is just a `.git` and the actual files are scatter across `$HOME` directory (mostly in `~/.config/`).
+Dotfiles repo in the form of a bare git repo. That means the repo contains just a `.git` and the actual files are scattered across `$HOME` directory (mostly in `~/.config/`). So this repo can be cloned into `~/.dotfiles` while tracking files outside this directory.
 
 ## Download
 
