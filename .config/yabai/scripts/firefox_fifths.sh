@@ -101,6 +101,15 @@ echo "Positioning windows $window1 and $window2 on space $target_space..."
 yabai -m window $window1 --space $target_space
 yabai -m window $window2 --space $target_space
 
+# Float settings for window
+yabai -m config --space $target_space layout float
+yabai -m config top_padding 12
+yabai -m config bottom_padding 12
+yabai -m config left_padding 12
+yabai -m config right_padding 12
+yabai -m config window_gap 06
+
+
 # Position first window (left 2/5)
 yabai -m window $window1 --toggle float 2>/dev/null
 yabai -m window $window1 --grid 1:5:0:0:2:1
