@@ -22,6 +22,8 @@
 # $ git primary    # Switch to primary identity (work)
 # $ git secondary  # Switch to secondary identity (personal)  
 # $ git whoami     # Check current identity
+# Note: `git [primary | secondary]` switches git identity only for the current repo
+# Note: `git [ssh-primary | ssh-secondary]` switches ssh key globally, affects push/pull for all repos
 [alias]
     primary = !git config user.name "{{PRIMARY_NAME}}" && git config user.email "{{PRIMARY_EMAIL}}" && echo "Switched to primary identity: {{PRIMARY_EMAIL}}"
     secondary = !git config user.name "{{SECONDARY_NAME}}" && git config user.email "{{SECONDARY_EMAIL}}" && echo "Switched to secondary identity: {{SECONDARY_EMAIL}}"
