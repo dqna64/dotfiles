@@ -30,7 +30,7 @@ substitute_template() {
 
 # Generate actual config files
 substitute_template "$DOTFILES_DIR/git/gitconfig.template" "$HOME/.gitconfig"
-substitute_template "$DOTFILES_DIR/git/gitconfig-secondary.template" "$HOME/.gitconfig-personal"
+substitute_template "$DOTFILES_DIR/git/gitconfig-personal.template" "$HOME/.gitconfig-personal"
 
 # Symlink global gitignore
 ln -sfv "$DOTFILES_DIR/git/gitignore_global" "$HOME/.gitignore_global"
