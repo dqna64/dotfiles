@@ -47,6 +47,7 @@ fi
 # === Alias for working with dotfiles bare git repo
 
 alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+dotfiles config core.fsmonitor false
 dotfiles config --local status.showUntrackedFiles no
 
 # ===
