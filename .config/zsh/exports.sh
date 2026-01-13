@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # === anaconda3
 export PATH="/opt/anaconda3/bin:$PATH"
 

@@ -66,3 +66,12 @@ if [[ "$ENABLE_YABAI_DQNA64" == "true" ]]; then
     fi
 fi
 
+# === Exports
+local EXPORTS_PATH="$HOME/.config/zsh/exports.sh"
+echo "Loading exports from $EXPORTS_PATH"
+if [ -f "$EXPORTS_PATH" ]; then
+	source $EXPORTS_PATH
+fi
+
+# ===
+
