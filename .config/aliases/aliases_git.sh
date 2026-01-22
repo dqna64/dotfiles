@@ -6,10 +6,30 @@ alias gps="git push"
 alias gpl="git pull"
 alias gd="git diff"
 alias gl="git log"
+alias grb="git rebase"
+alias gsw="git switch"
 
 # By BlakeC
 checkoutorigin() {
   git remote set-branches --add origin "$1" && git fetch origin "$1" && git checkout "$1"
+}
+
+backup_branch() {
+  local BRANCH_NAME
+  if BRANCH_NAME=$(git branch --show-current 2>/dev/null) ; then
+    echo "Current branch name: ${BRANCH_NAME}"
+  else
+    echo "No current branch name found"
+    return 1
+  fi
+  
+  local SUFFIX="${1:-backup-$(date +%y%m%d)}"
+  
+  local NEW_BRANCH_NAME="${BRANCH_NAME}-${SUFFIX}"
+  
+  echo "Creating new branch ${NEW_BRANCH_NAME}..."
+  git branch "$NEW_BRANCH_NAME" "$BRANCH_NAME"
+  git push -u origin "$NEW_BRANCH_NAME"
 }
 
 # By BlakeC
