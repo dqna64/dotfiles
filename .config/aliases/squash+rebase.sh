@@ -1,7 +1,8 @@
-# === Git squash and rebase function
+#!/usr/bin/env bash
+# Git squash and rebase function
 # Usage: squash+rebase
 
-squash_and_rebase() {
+squash+rebase() {
     # Save current branch name
     local current_branch=$(git branch --show-current)
     
@@ -29,8 +30,8 @@ squash_and_rebase() {
         echo "You have uncommitted changes in your working tree:"
         git status --short
         echo
-        read -p "Include these changes in the squash commit? (y/N): " -n 1 -r
-        echo
+        echo -n "Include these changes in the squash commit? (y/N): "
+        read REPLY
         
         if [[ $REPLY =~ ^[Yy]$ ]]; then
             include_uncommitted=true
@@ -46,13 +47,15 @@ squash_and_rebase() {
     # Show what will be reset and ask for confirmation
     echo "About to soft reset from $(git rev-parse --short HEAD) to $(git rev-parse --short "$merge_base")"
     echo "This will remove commits after the merge-base but keep all their changes staged for the squash commit."
-    read -p "Continue? (y/N): " -n 1 -r
-    echo
+    echo -n "Continue? (y/N): "
+    read REPLY
     
     if [[ ! $REPLY =~ ^[Yy]$ ]]; then
         echo "Operation cancelled."
         return 1
     fi
+    echo
+    echo
     
     # Soft reset to merge-base commit
     echo "Soft resetting to merge-base..."
