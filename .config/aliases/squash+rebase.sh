@@ -14,6 +14,9 @@ squash+rebase() {
     
     echo "Current branch: $current_branch"
     
+    echo "Fetching origin master..."
+    git fetch origin master
+    
     # Get merge-base commit between HEAD and origin/master
     local merge_base=$(git merge-base HEAD origin/master)
     if [[ $? -ne 0 ]]; then
@@ -69,15 +72,14 @@ squash+rebase() {
     # Note: changes from removed commits are already staged after soft reset
     git commit -m "squash commits of $current_branch"
     
-    # Fetch origin master and rebase
-    echo "Fetching origin master and rebasing..."
-    git fetch origin master
+    # Rebase onto origin/master
+    echo "Rebasing onto origin/master..."
     git rebase origin/master
     
     # Restore stashed changes if we stashed them
     if [[ "$did_stash" == "true" ]]; then
-        echo "Remember to restore your uncommitted changes with: git stash pop"
+        echo "Remember to restore your uncommitted changes with: git stash apply"
     fi
     
-    echo "Squash and rebase completed!"
+    echo "Squashed and attempted rebase. Make sure to resolve rebase conflicts if any!"
 }
