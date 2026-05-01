@@ -73,5 +73,10 @@ if [ -f "$EXPORTS_PATH" ]; then
 	source $EXPORTS_PATH
 fi
 
+# === ripgrep config
+# When running ripgrep `$ rg`, it will use the defaults set in the file
+# whose path specified at this env var:
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/ripgreprc"
+
 # ===
 
