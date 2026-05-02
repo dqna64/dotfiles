@@ -4,7 +4,7 @@ echo "=== Firefox Windows ==="
 echo ""
 
 # Get all Firefox windows with useful info
-firefox_windows=$(yabai -m query --windows | jq -r '.[] | select(.app=="Firefox") | "\(.id)|\(.title)|\(.space)|\(.frame.w)x\(.frame.h)"')
+firefox_windows=$(yabai -m query --windows | jq -r '.[] | select(.app | ascii_downcase =="firefox") | "\(.id)|\(.title)|\(.space)|\(.frame.w)x\(.frame.h)"')
 
 if [ -z "$firefox_windows" ]; then
     echo "No Firefox windows found!"
@@ -96,6 +96,8 @@ rm -f "$tmpfile1" "$tmpfile2"
 
 clear
 echo "Positioning windows $window1 and $window2 on space $target_space..."
+## echo "DEBUG: window1='$window1' (length: ${#window1})"
+## echo "DEBUG: window2='$window2' (length: ${#window2})"
 
 # Move windows to target space
 yabai -m window $window1 --space $target_space
