@@ -55,7 +55,7 @@ dotfiles config --local status.showUntrackedFiles no
 bindkey "[D" backward-word
 bindkey "[C" forward-word
 
-# ===
+# === Yabai window management
 
 if [[ "$ENABLE_YABAI_DQNA64" == "true" ]]; then
     ~/.config/yabai/start.sh
