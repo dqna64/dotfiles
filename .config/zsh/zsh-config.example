@@ -20,3 +20,10 @@ ENABLE_YABAI_DQNA64=false # true or false
 # - 1: important messages
 # - 2: informative messages
 export VERBOSITY_DQNA64=1
+
+# === Path to CNV work binaries
+
+export CNV_WORK_BIN_PATH=
+
+# ===
+
