@@ -81,9 +81,7 @@ export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/ripgreprc"
 # === Add cnv work binaries path to path env var, if exists
 
 if [[ -n "$CNV_WORK_BIN_PATH" ]]; then
-	echo helloo
-	#path=("${CNV_WORK_BIN_PATH}" $path)
-	export PATH="${CNV_WORK_BIN_PATH}:$PATH"
+	path=("${CNV_WORK_BIN_PATH}" $path)
 	# ^^ use zsh array view `path` of `PATH` env var to prepend the new value to path
 fi
 
