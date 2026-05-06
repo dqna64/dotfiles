@@ -2,15 +2,17 @@
 
 set -e
 
+DOTFILES_PATH="$HOME/.dotfiles-dqna64/"
+
 # === Clone this dotfiles repo if it does not already exist
 
-if [ ! -d "$HOME/.dotfiles/" ]; then
-	echo "Cloning https://github.com/dqna64/dotfiles into `$HOME/.dotfiles` as bare repo..."
-	git clone --bare git@github.com:dqna64/dotfiles.git $HOME/.dotfiles
+if [ ! -d "$DOTFILES_PATH" ]; then
+	echo "Cloning https://github.com/dqna64/dotfiles into `$DOTFILES_PATH` as bare repo..."
+	git clone --bare git@github.com:dqna64/dotfiles.git $DOTFILES_PATH
 	
 	# Create an alias for managing the dotfiles repo with git
 	echo "Creating alias `dotfiles`..."
-	alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+	alias dotfiles='git --git-dir=$DOTFILES_PATH --work-tree=$HOME'
 
 	# Hide untracked files (otherwise your entire home directory shows up in `git status`)
 	dotfiles config --local status.showUntrackedFiles no
@@ -19,7 +21,7 @@ if [ ! -d "$HOME/.dotfiles/" ]; then
 	# exist on your machine)
 	dotfiles checkout		
 else
-	echo "$HOME/.dotfiles already exists. Please clone to a different path or remove existing directory." >&2
+	echo "$DOTFILES_PATH already exists. Please clone to a different path or remove existing directory." >&2
 	exit 1
 fi
 	
