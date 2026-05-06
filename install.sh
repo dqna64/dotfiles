@@ -12,7 +12,7 @@ if [ ! -d "$DOTFILES_PATH" ]; then
 	
 	# Create an alias for managing the dotfiles repo with git
 	echo "Creating alias `dotfiles`..."
-	alias dotfiles='git --git-dir=$DOTFILES_PATH --work-tree=$HOME'
+	alias dotfiles="git --git-dir=$DOTFILES_PATH --work-tree=$HOME"
 
 	# Hide untracked files (otherwise your entire home directory shows up in `git status`)
 	dotfiles config --local status.showUntrackedFiles no
