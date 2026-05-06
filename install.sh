@@ -37,8 +37,9 @@ fi
 # https://ohmyz.sh/
 
 echo "Installing oh-my-zsh..."
-# Prevent ohmyzsh installation running zsh at the end
-RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# Prevent ohmyzsh installation running zsh at the end prevent it from
+# replacing .zshrc, preventing changing default shell
+RUNZSH=no KEEP_ZSHRC=yes CHSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "Downloading oh-my-zsh themes..."
 echo "powerlevel10k..."
