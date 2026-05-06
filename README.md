@@ -5,8 +5,8 @@ Dotfiles repo in the form of a bare git repo. That means the repo contains just 
 ## Download
 
 ```bash
-# Clone to your machine as a bare git repo
-$ git clone --bare git@github.com:dqna64/dotfiles.git $HOME/.dotfiles
+# Clone to your machine as a bare git repo (or clone with ssh if you want to push changes)
+$ git clone --bare https://github.com/dqna64/dotfiles.git $HOME/.dotfiles
 
 # Create an alias for managing the dotfiles repo with git
 $ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
