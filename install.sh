@@ -10,10 +10,10 @@ if [ ! -d "$DOTFILES_PATH" ]; then
 	echo "Cloning https://github.com/dqna64/dotfiles into `$DOTFILES_PATH` as bare repo..."
 	git clone --bare git@github.com:dqna64/dotfiles.git $DOTFILES_PATH
 	
-	# Create an alias for managing the dotfiles repo with git
-	echo "Creating alias `dotfiles`..."
-	alias dotfiles="git --git-dir=$DOTFILES_PATH --work-tree=$HOME"
-
+	dotfiles() {
+		git --git-dir="$DOTFILES_PATH" --work-tree="$HOME" "$@"
+	}
+	
 	# Hide untracked files (otherwise your entire home directory shows up in `git status`)
 	dotfiles config --local status.showUntrackedFiles no
 
@@ -40,7 +40,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 # === zsh
 
-if [ "$SHELL" != "$which zsh)" ]; then
+if [ "$SHELL" != "$(which zsh)" ]; then
 	echo "Changing default shell to zsh..."
 	chsh -s $(which zsh)
 fi
