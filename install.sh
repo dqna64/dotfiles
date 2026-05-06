@@ -6,7 +6,7 @@ DOTFILES_PATH="$HOME/.dotfiles-dqna64/"
 
 # === Pre-clone checks
 
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
+if [ -d "$HOME/.oh-my-zsh" ]; then
 	echo "$HOME/.oh-my-zsh exists, please delete it or back it up before installing these dotfiles" >&2
 	exit 1
 fi
@@ -14,7 +14,7 @@ fi
 # === Clone this dotfiles repo if it does not already exist
 
 if [ ! -d "$DOTFILES_PATH" ]; then
-	echo "Cloning https://github.com/dqna64/dotfiles into `$DOTFILES_PATH` as bare repo..."
+	echo "Cloning https://github.com/dqna64/dotfiles into '$DOTFILES_PATH' as bare repo..."
 	git clone --bare git@github.com:dqna64/dotfiles.git $DOTFILES_PATH
 	
 	dotfiles() {
