@@ -4,6 +4,13 @@ set -e
 
 DOTFILES_PATH="$HOME/.dotfiles-dqna64/"
 
+# === Pre-clone checks
+
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+	echo "$HOME/.oh-my-zsh" exists, please delete it or back it up before installing these dotfiles" >&2
+	exit 1
+fi
+
 # === Clone this dotfiles repo if it does not already exist
 
 if [ ! -d "$DOTFILES_PATH" ]; then
