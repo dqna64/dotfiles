@@ -1,3 +1,4 @@
+DOTFILES_BARE_REPO_PATH="$HOME/.dotfiles-dqna64"
 DOTFILES_DIR="$HOME/.config"
 
 # === Source zsh config
@@ -46,7 +47,7 @@ fi
 
 # === Alias for working with dotfiles bare git repo
 
-alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias dotfiles="git --git-dir=$DOTFILES_BARE_REPO_PATH --work-tree=$HOME"
 dotfiles config core.fsmonitor false
 dotfiles config --local status.showUntrackedFiles no
 
