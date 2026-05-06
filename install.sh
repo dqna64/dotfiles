@@ -19,7 +19,8 @@ if [ ! -d "$HOME/.dotfiles/" ]; then
 	# exist on your machine)
 	dotfiles checkout		
 else
-	echo "$HOME/.dotfiles already exists. Please clone to a different path or remove existing directory."
+	echo "$HOME/.dotfiles already exists. Please clone to a different path or remove existing directory." >&2
+	exit 1
 fi
 	
 # === Install oh-my-zsh
