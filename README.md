@@ -2,21 +2,10 @@
 
 Dotfiles repo in the form of a bare git repo. That means the repo contains just a `.git` and the actual files are scattered across `$HOME` directory (mostly in `~/.config/`). So this repo can be cloned into `~/.dotfiles` while tracking files outside this directory.
 
-## Download
+## Install
 
 ```bash
-# Clone to your machine as a bare git repo (or clone with ssh if you want to push changes)
-$ git clone --bare https://github.com/dqna64/dotfiles.git $HOME/.dotfiles
-
-# Create an alias for managing the dotfiles repo with git
-$ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
-# Hide untracked files (otherwise your entire home directory shows up in `git status`)
-$ dotfiles config --local status.showUntrackedFiles no
-
-# Checkout the dotfiles (will error if some files from dotfiles already
-# exist on your machine)
-$ dotfiles checkout
+$ curl -fsSL https://raw.githubusercontent.com/dqna64/dotfiles/main/install.sh | sh
 ```
 
 ## Usage
