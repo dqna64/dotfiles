@@ -25,5 +25,9 @@ export VERBOSITY_DQNA64=1
 
 export CNV_WORK_BIN_PATH=
 
+# === Path for agents to store and read plans
+
+export AGENT_PLANS=
+
 # ===
 
