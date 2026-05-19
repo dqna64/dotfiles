@@ -87,3 +87,10 @@ if [[ -n "$CNV_WORK_BIN_PATH" ]]; then
 fi
 
 # ===
+# Some automatically installed exports on my cnv devboxes
+
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.opencode/bin:$PATH"
+
+# ===
+
