@@ -20,3 +20,4 @@ Desktop.ini
 # General
 .env.local
 *.log
+**/.claude/**/*.local.*
