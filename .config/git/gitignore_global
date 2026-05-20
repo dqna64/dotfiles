@@ -20,4 +20,6 @@ Desktop.ini
 # General
 .env.local
 *.log
-**/.claude/**/*.local.*
+
+# Agent plans
+**/.agent/**/*.local.*
