@@ -15,7 +15,7 @@
     }
   ],
   "github.copilot.enable": {
-    "*": true,
+    "*": false,
     "plaintext": false,
     "markdown": false,
     "scminput": false,
@@ -28,9 +28,9 @@
     "python": false,
     "cpp": false,
     "c": false,
-    "typescript": true,
     "typescriptreact": true,
-    "java": true
+    "java": true,
+    "typescript": false
   },
   "editor.minimap.enabled": false,
   "editor.wordWrap": "on",
